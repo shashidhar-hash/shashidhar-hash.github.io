@@ -1,0 +1,122 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f9fafb;
+  background-color: #0c0c0e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(140deg, #141416, #1e1f24 45%, #2c2e33);
+  color: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.login-card {
+  width: min(100%, 390px);
+  padding: 2.8rem;
+  border-radius: 1.6rem;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.1), rgba(18, 20, 24, 0.85));
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 85px rgba(0, 0, 0, 0.65);
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 1.85rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #c5c8d3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e3e4ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+input {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.8rem;
+  padding: 1rem 1.1rem;
+  font-size: 1rem;
+  color: #f9fafb;
+  background: rgba(255, 255, 255, 0.05);
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+input:focus {
+  border-color: #7c8dff;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(124, 141, 255, 0.25);
+  outline: none;
+}
+
+button {
+  margin-top: 0.8rem;
+  padding: 1rem 1.1rem;
+  border-radius: 0.85rem;
+  border: none;
+  background: linear-gradient(120deg, #7088ff, #8a58ff);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 35px rgba(112, 136, 255, 0.35);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 28px 45px rgba(112, 136, 255, 0.45);
+}
+
+#feedback {
+  min-height: 1.25rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#feedback.error {
+  color: #f97066;
+}
+
+#feedback.success {
+  color: #3dd68c;
+}
+

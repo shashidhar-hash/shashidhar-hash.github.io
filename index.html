@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="login-card">
+        <h1>Welcome</h1>
+        <p class="subtitle">Sign in with your login ID and password</p>
+        <form id="login-form" novalidate>
+          <label>
+            Login ID
+            <input
+              type="text"
+              id="loginId"
+              name="loginId"
+              placeholder="Enter your ID"
+              autocomplete="username"
+              required
+            />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <button type="submit">Log in</button>
+          <p id="feedback" role="alert" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
